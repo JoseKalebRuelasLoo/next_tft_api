@@ -53,44 +53,47 @@ export default function App() {
           "Content-Type": "application/json",
         },
       });
-
       const data = await respuesta.json();
-      setName(data.name.charAt(0).toUpperCase() + data.name.slice(1));
-      setOrigin(data.synergies.origin);
-      setClass(data.synergies.class);
-      setSecond_class(data.synergies.second_class);
-      setSplashart(data.gallery.splashart);
-      setIcon(data.gallery.icon);
-      setCost(data.stats.cost);
-      setHealth_level_1(data.stats.health.level_1);
-      setHealth_level_2(data.stats.health.level_2);
-      setHealth_level_3(data.stats.health.level_3);
-      setHealth_level_4(data.stats.health.level_4);
-      setMax_mana(data.stats.mana.max_mana);
-      setStarting_mana(data.stats.mana.starting_mana);
-      setAtk_damage_level_1(data.stats.atk_damage.level_1);
-      setAtk_damage_level_2(data.stats.atk_damage.level_2);
-      setAtk_damage_level_3(data.stats.atk_damage.level_3);
-      setAtk_damage_level_4(data.stats.atk_damage.level_4);
 
-      setArmor(data.stats.armor);
-      setMagic_resistance(data.stats.magic_resistance);
-      setAbility_power(data.stats.ability_power);
-      setAtk_spd(data.stats.atk_spd);
-      setCrit_rate(data.stats.crit_rate);
-      setCrit_damage(data.stats.crit_damage);
-      setRange(data.stats.range);
+      if (name ==""&&cost=="") {
+        setName(data.name.charAt(0).toUpperCase() + data.name.slice(1));
+        setOrigin(data.synergies.origin);
+        setClass(data.synergies.class);
+        setSecond_class(data.synergies.second_class);
+        setSplashart(data.gallery.splashart);
+        setIcon(data.gallery.icon);
+        setCost(data.stats.cost);
+        setHealth_level_1(data.stats.health.level_1);
+        setHealth_level_2(data.stats.health.level_2);
+        setHealth_level_3(data.stats.health.level_3);
+        setHealth_level_4(data.stats.health.level_4);
+        setMax_mana(data.stats.mana.max_mana);
+        setStarting_mana(data.stats.mana.starting_mana);
+        setAtk_damage_level_1(data.stats.atk_damage.level_1);
+        setAtk_damage_level_2(data.stats.atk_damage.level_2);
+        setAtk_damage_level_3(data.stats.atk_damage.level_3);
+        setAtk_damage_level_4(data.stats.atk_damage.level_4);
 
-      setAbility_name(data.ability.name);
-      setAbility_description(data.ability.description);
-      setItem_1(data.recommended_items.item_1);
-      setItem_2(data.recommended_items.item_2);
-      setItem_3(data.recommended_items.item_3);
-      setItem_4(data.recommended_items.item_4);
-      setItem_5(data.recommended_items.item_5);
-      setItem_6(data.recommended_items.item_6);
-      setItem_7(data.recommended_items.item_7);
-      setItem_8(data.recommended_items.item_8);
+        setArmor(data.stats.armor);
+        setMagic_resistance(data.stats.magic_resistance);
+        setAbility_power(data.stats.ability_power);
+        setAtk_spd(data.stats.atk_spd);
+        setCrit_rate(data.stats.crit_rate);
+        setCrit_damage(data.stats.crit_damage);
+        setRange(data.stats.range);
+
+        setAbility_name(data.ability.name);
+        setAbility_description(data.ability.description);
+        setItem_1(data.recommended_items.item_1);
+        setItem_2(data.recommended_items.item_2);
+        setItem_3(data.recommended_items.item_3);
+        setItem_4(data.recommended_items.item_4);
+        setItem_5(data.recommended_items.item_5);
+        setItem_6(data.recommended_items.item_6);
+        setItem_7(data.recommended_items.item_7);
+        setItem_8(data.recommended_items.item_8);
+      }
+
     } catch (error) {
       console.error("Error al llamar a la API:", error);
     }

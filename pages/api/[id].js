@@ -9,13 +9,6 @@ export default async function handler(req, res) {
 
   const abuscar = id;
 
-  /*
-  // Getting One
-  router.get("/:id", getChampion, (req, res) => {
-    res.json(res.champion);
-  });
-*/
-
   if (req.method === "GET") {
     res.status(200).json(await getChampion(abuscar));
   } else if (req.method === "PATCH") {

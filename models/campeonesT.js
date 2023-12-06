@@ -18,17 +18,14 @@ const champions_Schema = new Schema({
     origin: {
       type: String,
       required: true,
-      lowercase: true,
     },
     class: {
       type: String,
       required: true,
-      lowercase: true,
     },
     second_class: {
       type: String,
       required: false,
-      lowercase: true,
     },
   },
   gallery: {
